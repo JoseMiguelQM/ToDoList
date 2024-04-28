@@ -37,6 +37,10 @@ public class TaskService {
             Task existingTask = existingTaskOptional.get();
             existingTask.setDescription(updatedTask.getDescription());
             existingTask.setCompleted(updatedTask.getCompleted());
+            existingTask.setType(updatedTask.getType()); // Adicionando o tipo de tarefa
+            existingTask.setPriority(updatedTask.getPriority()); // Adicionando a prioridade
+            existingTask.setDeadlineDate(updatedTask.getDeadlineDate()); // Adicionando a data de prazo
+            existingTask.setDeadlineDays(updatedTask.getDeadlineDays()); // Adicionando os dias de prazo
             return taskRepository.save(existingTask);
         } else {
             // Lidar com o caso em que a tarefa com o ID fornecido não existe
