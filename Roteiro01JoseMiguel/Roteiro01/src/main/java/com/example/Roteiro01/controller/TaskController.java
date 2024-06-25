@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/task") // Define o caminho base para todos os endpoints deste controlador
-@CrossOrigin(origins = "https://http://localhost:3000/")
+@CrossOrigin(origins = "http://localhost:3000/todo")
 public class TaskController {
 
     private final TaskService taskService;
